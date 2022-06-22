@@ -1,0 +1,4 @@
+#!/bin/bash
+ln -lna
+tmp
+my_first_directory
