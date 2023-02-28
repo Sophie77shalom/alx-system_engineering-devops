@@ -16,4 +16,3 @@ def top_ten(subreddit):
     else:
         [print(child.get("data").get("title"))
          for child in sub_info.json().get("data").get("children")]
-        
