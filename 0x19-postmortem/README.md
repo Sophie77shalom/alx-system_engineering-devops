@@ -5,14 +5,23 @@
 
 # Timeline
 9:10 AM : Updates push
+
 9:15 AM : Noticing the problem
+
 9:15 AM : Notifying the both front end and backend teams
+
 9:20 AM : Successful change rollback
+
 9:24 AM : Server Restarts begin
+
 9:27 AM : 100% of traffic back online
+
 9:30 AM : start debugging the push with the problem
+
 9:50 AM : Probelm fixed and pushed the changes
+
 9:55 AM : Server restart begins
+
 10:00 AM : 100% traffic back online with the new updates
 # Root cause and resolution
 After rolling back changes we knew that the changes were made by the front end team so we took the broken changes and run them on a test server which replicated same problem, our server uses apache2 and apache2 error logs didn't give enough infomation about the problem so we traced the apache2 process using strace and when a request is sent strace tool catchs a lot of error and after some scaning foR these errors we found the error which is a typo in page file extention 
